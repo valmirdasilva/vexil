@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://valmirdasilva.github.io/vexil/sitemap.xml
