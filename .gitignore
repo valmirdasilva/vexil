@@ -1,0 +1,15 @@
+# capturas de verificacao e backups locais, nao vao para o repositorio
+shots/
+*.bak.html
+.bak-*.html
+index-v1-cru.html
+
+# manual da marca: fica junto do projeto, nao vai para o site publico
+identidade/
+
+# pecas tiradas da pagina e guardadas para outro projeto, nao sao site
+guardados/
+
+# os quatro arquivos que o site usa estao em marca/, copiados daqui.
+# Trocou algum deles? copie de novo para marca/, senao o site fica com a
+# versao velha no ar.

@@ -1,0 +1,2014 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Vexil Co. — sites e marcas que as pessoas seguem</title>
+<meta name="description" content="Vexil Co.: sites, identidade, tráfego pago e vídeo na mesma mão. Nove negócios no ar, todos clicáveis.">
+<meta name="theme-color" content="#F4F1EA">
+<link rel="canonical" href="https://juniorfever.github.io/vexil-studio/">
+
+<!-- Previa do link. O site e mandado por WhatsApp na prospeccao, entao a previa
+     e a primeira coisa que o cliente ve, antes de abrir. share.jpg e um recorte
+     1440x756 da propria abertura, na proporcao 1.91:1 que WhatsApp e Facebook usam. -->
+<meta property="og:type" content="website">
+<meta property="og:locale" content="pt_BR">
+<meta property="og:site_name" content="Vexil Co.">
+<meta property="og:url" content="https://juniorfever.github.io/vexil-studio/">
+<meta property="og:title" content="Vexil Co. — sites e marcas que as pessoas seguem">
+<meta property="og:description" content="Site, identidade, tráfego pago e vídeo na mesma mão. Nove negócios no ar, todos clicáveis.">
+<meta property="og:image" content="https://juniorfever.github.io/vexil-studio/share.jpg">
+<meta property="og:image:width" content="1440">
+<meta property="og:image:height" content="756">
+<meta property="og:image:alt" content="Abertura do site da Vexil Co. com a frase Sites e marcas que as pessoas seguem e a lista dos nove negócios">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Vexil Co. — sites e marcas que as pessoas seguem">
+<meta name="twitter:description" content="Site, identidade, tráfego pago e vídeo na mesma mão. Nove negócios no ar, todos clicáveis.">
+<meta name="twitter:image" content="https://juniorfever.github.io/vexil-studio/share.jpg">
+
+<link rel="icon" href="favicon.svg" type="image/svg+xml">
+<link rel="apple-touch-icon" href="apple-touch-icon.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500;600;700&family=Inter:ital,opsz,wght@0,14..32,300..700;1,14..32,300..700&display=swap">
+<style>
+/* ==========================================================================
+   Vexil Co. — portfólio
+   Estrutura, escala tipográfica e ritmo seguem o layout de referência:
+   grotesca leve enorme com entreletra negativa, grade assimétrica com vazio
+   deliberado, colunas separadas por filete, cartões grandes de canto redondo,
+   escada numerada e marquise de clientes.
+   Da Vexil ficam o logo (Cinzel) e as cores.
+   ========================================================================== */
+
+:root {
+  --ground:    #F4F1EA;   /* marfim */
+  --ground-2:  #EDE9E0;
+  --areia:     #DCD5C6;
+  --ink:       #15171A;   /* tinta */
+  --ink-2:     #55574F;
+  --fade:      #9A978D;   /* o cinza das palavras apagadas do título */
+  --bronze:    #8A6236;   /* sobre marfim */
+  --bronze-cl: #B4895B;   /* sobre tinta */
+  --inv:       #F4F1EA;
+  --inv-2:     #B9BCBE;
+  --rule:      rgba(21, 23, 26, 0.16);
+  --rule-inv:  rgba(244, 241, 234, 0.24);
+
+  --wrap:   1300px;
+  --gutter: clamp(20px, 5vw, 76px);
+  --gap:    clamp(24px, 2.6vw, 38px);
+
+  --d1: clamp(40px, 7.4vw, 104px);   /* título da abertura */
+  --d2: clamp(32px, 5.2vw, 74px);    /* títulos de seção */
+  --d3: clamp(22px, 2.3vw, 32px);    /* nomes de projeto */
+}
+
+*, *::before, *::after { box-sizing: border-box; }
+
+body {
+  margin: 0;
+  background: var(--ground);
+  position: relative;   /* ancora a grade da abertura no topo do documento */
+  color: var(--ink);
+  /* Inter é a fonte de texto do manual da marca; Cinzel fica só no logo */
+  font-family: Inter, system-ui, -apple-system, sans-serif;
+  font-size: 17px;
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+}
+
+img { display: block; max-width: 100%; height: auto; }
+h1, h2, h3, h4, p, ul, ol, figure, blockquote { margin: 0; }
+ul, ol { list-style: none; padding: 0; }
+
+a { color: inherit; }
+
+.wrap { max-width: var(--wrap); margin: 0 auto; padding-left: var(--gutter); padding-right: var(--gutter); }
+
+:focus-visible { outline: 2px solid var(--bronze); outline-offset: 3px; }
+
+.pular {
+  position: absolute; width: 1px; height: 1px; overflow: hidden;
+  clip-path: inset(50%); white-space: nowrap;
+  background: var(--ink); color: var(--ground); padding: 12px 18px; z-index: 90;
+}
+.pular:focus { width: auto; height: auto; clip-path: none; left: 10px; top: 10px; }
+
+/* ---------- tipografia da referência ---------- */
+
+.display {
+  font-weight: 300;
+  font-size: var(--d1);
+  line-height: 0.86;
+  letter-spacing: -0.045em;
+}
+
+.titulo {
+  font-weight: 300;
+  font-size: var(--d2);
+  line-height: 0.92;
+  letter-spacing: -0.04em;
+}
+
+.apagado { color: var(--fade); }
+.italico { font-style: italic; }
+
+.etiqueta {
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 1.25;
+  letter-spacing: 0.01em;
+  text-transform: uppercase;
+}
+
+.corpo { font-size: 17px; line-height: 1.55; color: var(--ink); }
+.corpo--fraco { color: var(--ink-2); }
+
+/* ---------- botões ---------- */
+
+.pilula {
+  display: inline-flex;
+  align-items: center;
+  gap: 14px;
+  text-decoration: none;
+}
+
+.pilula__texto {
+  border: 1px solid var(--ink);
+  border-radius: 999px;
+  padding: 15px 28px;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 1;
+  /* dentro de um título a entreletra é negativa: a pílula volta ao normal */
+  letter-spacing: normal;
+  white-space: nowrap;
+  transition: background-color 180ms ease, color 180ms ease;
+}
+
+.pilula__seta {
+  width: 46px; height: 46px;
+  border: 1px solid var(--ink);
+  border-radius: 999px;
+  display: grid;
+  place-items: center;
+  transition: background-color 180ms ease, color 180ms ease, transform 220ms ease;
+}
+
+.pilula:hover .pilula__texto,
+.pilula:hover .pilula__seta { background: var(--ink); color: var(--ground); }
+.pilula:hover .pilula__seta { transform: rotate(45deg); }
+
+.pilula--inv .pilula__texto,
+.pilula--inv .pilula__seta { border-color: var(--inv); color: var(--inv); }
+.pilula--inv:hover .pilula__texto,
+.pilula--inv:hover .pilula__seta { background: var(--inv); color: var(--ink); }
+
+/* link sublinhado da referência */
+.sub {
+  text-decoration: none;
+  background-image: linear-gradient(currentColor, currentColor);
+  background-size: 100% 1px;
+  background-repeat: no-repeat;
+  background-position: 0 100%;
+  padding-bottom: 3px;
+  transition: color 160ms ease, background-size 220ms ease;
+}
+.sub:hover { color: var(--bronze); }
+
+/* ==========================================================================
+   CABEÇALHO — logo, linha de aposto, menu em lista
+   ========================================================================== */
+
+/* a barra flutua colada no topo e acompanha a rolagem; o respiro que o
+   cabeçalho ocupava vira padding-top do main, senão a abertura entra por baixo */
+.topo {
+  position: fixed;
+  inset: 0 0 auto;
+  z-index: 60;
+  padding-block: var(--barra-folga);
+  pointer-events: none;
+}
+.topo .wrap { pointer-events: none; }
+
+/* Parada no topo, a barra não existe como objeto: só o logo e o menu, soltos
+   sobre a abertura. A cápsula inteira (fundo, filete, desfoque e sombra) mora
+   num pseudo-elemento que entra em fade quando a página desce.
+   O fade é do pseudo-elemento e não das propriedades em si de propósito:
+   backdrop-filter não interpola, então animar a cápsula como uma camada só é o
+   que dá um aparecimento liso em vez de um salto. */
+.barra {
+  pointer-events: auto;
+  position: relative;
+  isolation: isolate;
+  display: grid;
+  grid-template-columns: auto minmax(0, 1fr) auto;
+  align-items: center;
+  gap: clamp(16px, 3vw, 44px);
+  padding: 10px 12px 10px clamp(18px, 2vw, 26px);
+  border-radius: 999px;
+}
+.barra::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: -1;
+  border: 1px solid var(--rule);
+  border-radius: inherit;
+  background: rgba(244, 241, 234, 0.92);
+  box-shadow: 0 10px 34px rgba(21, 23, 26, 0.10);
+  backdrop-filter: blur(14px) saturate(140%);
+  -webkit-backdrop-filter: blur(14px) saturate(140%);
+  opacity: 0;
+  transition: opacity 320ms cubic-bezier(.4, 0, .2, 1);
+}
+.rolou .barra::before,
+.menu-aberto .barra::before { opacity: 1; }
+
+/* quem prefere menos movimento recebe a cápsula sempre montada */
+@media (prefers-reduced-motion: reduce) {
+  .barra::before { transition: none; }
+}
+
+/* 66px é a altura medida da barra: o logo manda nela e tem tamanho fixo.
+   O respiro do main é a barra mais a folga do topo mais ar, senão a abertura
+   encosta na cápsula; o scroll-padding faz as âncoras pararem abaixo dela. */
+:root { --barra-alt: 66px; --barra-folga: clamp(12px, 1.6vw, 20px); }
+main { padding-top: calc(var(--barra-alt) + var(--barra-folga) + clamp(34px, 6vw, 76px)); }
+html { scroll-padding-top: calc(var(--barra-alt) + var(--barra-folga) + 26px); }
+
+/* Toda ancora do site desliza em vez de saltar: menu, botoes de secao e o
+   "Voltar ao topo" do rodape. O salto seco escondia o caminho entre as secoes.
+   Quem pede menos movimento no sistema continua recebendo o salto instantaneo. */
+html { scroll-behavior: smooth; }
+@media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } }
+
+.barra__menu { display: flex; justify-content: center; gap: clamp(14px, 2.2vw, 34px); }
+.barra__fim { display: flex; align-items: center; gap: 10px; }
+
+/* o rolo: duas cópias do rótulo dentro de uma máscara, a de cima sai por
+   baixo quando o ponteiro chega */
+.elo { text-decoration: none; font-size: 15px; line-height: 1; padding: 10px 2px; }
+.elo__rolo { display: block; position: relative; overflow: hidden; height: 1em; }
+.elo__rolo > span { display: block; transition: transform 300ms cubic-bezier(0.22, 1, 0.36, 1); }
+.elo__rolo > span + span { position: absolute; inset: 0; color: var(--bronze); }
+.elo__rolo > span + span { transform: translateY(100%); }
+.elo:hover .elo__rolo > span { transform: translateY(-100%); }
+.elo:hover .elo__rolo > span + span { transform: translateY(0); }
+.elo:focus-visible { border-radius: 6px; }
+
+.botao {
+  display: inline-flex;
+  align-items: center;
+  text-decoration: none;
+  font-size: 15px;
+  line-height: 1;
+  padding: 13px 22px;
+  border-radius: 999px;
+  background: var(--ink);
+  color: var(--inv);
+  white-space: nowrap;
+  transition: background-color 180ms ease;
+}
+.botao:hover { background: var(--bronze); }
+
+/* hambúrguer: dois riscos que viram X, com o rótulo ao lado */
+.hamb {
+  display: none;
+  align-items: center;
+  gap: 9px;
+  border: 1px solid var(--rule);
+  border-radius: 999px;
+  background: transparent;
+  color: inherit;
+  font: inherit;
+  font-size: 15px;
+  line-height: 1;
+  padding: 11px 17px 11px 14px;
+  cursor: pointer;
+}
+/* caixa própria para os dois riscos: abertos ficam empilhados, fechados
+   giram sobre o mesmo centro e viram um X de verdade */
+.hamb__icone { position: relative; display: block; width: 18px; height: 11px; }
+.hamb__risco { position: absolute; left: 0; width: 18px; height: 1.5px; background: currentColor; transition: transform 240ms ease; }
+.hamb__risco:first-child { top: 1px; }
+.hamb__risco:nth-child(2) { top: 8px; }
+.hamb[aria-expanded="true"] .hamb__risco:first-child { transform: translateY(3.5px) rotate(45deg); }
+.hamb[aria-expanded="true"] .hamb__risco:nth-child(2) { transform: translateY(-3.5px) rotate(-45deg); }
+
+/* A lâmina do celular. O mesmo chão do rodapé: tinta com o estandarte ao
+   fundo, para o menu pertencer à página e não parecer uma folha avulsa. */
+.lamina {
+  position: fixed;
+  inset: 0;
+  z-index: 55;
+  background-color: var(--ink);
+  background-image: url('marca/padrao-sobre-tinta.svg');
+  background-size: 120px auto;
+  color: var(--inv);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: clamp(30px, 7vw, 48px);
+  padding: clamp(96px, 18vw, 140px) var(--gutter)
+           calc(clamp(26px, 6vw, 40px) + env(safe-area-inset-bottom, 0px));
+  overflow-y: auto;
+  overscroll-behavior: contain;
+}
+/* um clarão de bronze no alto: sem ele a tinta chapada atrás do menu perde o
+   relevo que o resto da página tem */
+.lamina::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  background: radial-gradient(130% 58% at 0% 0%, rgba(180, 137, 91, 0.17), transparent 62%);
+}
+.lamina > * { position: relative; }
+.lamina[hidden] { display: none; }
+/* o foco entra na lâmina, não no primeiro item: focar o item desenhava um
+   retângulo de contorno em volta de "Trabalhos" toda vez que o menu abria.
+   Os itens seguem recebendo o contorno quando a pessoa chega por teclado. */
+.lamina:focus, .lamina:focus-visible { outline: none; }
+
+.lamina__rotulo { color: var(--inv-2); opacity: .66; margin-bottom: 14px; font-size: 12px; letter-spacing: .16em; }
+
+/* filete entre os itens: diz onde cada alvo começa e termina, coisa que a
+   lista solta de antes não dizia */
+.lamina__menu { display: flex; flex-direction: column; border-top: 1px solid var(--rule-inv); }
+.lamina__menu a {
+  display: grid;
+  grid-template-columns: auto 1fr auto;
+  align-items: center;
+  gap: 16px;
+  text-decoration: none;
+  color: var(--inv);
+  /* o respiro mais a altura do nome dão mais de 60px de alvo, acima dos 48
+     que o dedo precisa */
+  padding-block: clamp(15px, 3.6vw, 21px);
+  border-bottom: 1px solid var(--rule-inv);
+  transition: color 180ms ease;
+}
+.lamina__n {
+  font-size: 12px;
+  letter-spacing: .14em;
+  color: var(--bronze-cl);
+  opacity: .8;
+  font-variant-numeric: tabular-nums;
+}
+.lamina__nome {
+  font-size: clamp(27px, 7.6vw, 38px);
+  font-weight: 300;
+  letter-spacing: -0.032em;
+  line-height: 1.1;
+}
+.lamina__seta { opacity: .4; transition: transform 240ms cubic-bezier(.16, 1, .3, 1), opacity 180ms ease; }
+.lamina__menu a:hover, .lamina__menu a:active { color: var(--bronze-cl); }
+.lamina__menu a:hover .lamina__seta, .lamina__menu a:active .lamina__seta { opacity: 1; transform: translateX(5px); }
+/* a seção em que a pessoa está fica marcada: abrir o menu no meio da página
+   e não saber de onde se veio era o que mais faltava aqui */
+.lamina__menu a[aria-current] { color: var(--bronze-cl); }
+.lamina__menu a[aria-current] .lamina__n { opacity: 1; }
+.lamina__menu a[aria-current] .lamina__seta { opacity: .9; }
+
+.lamina__fecho { display: flex; flex-direction: column; gap: clamp(18px, 4vw, 26px); }
+.lamina__cta { align-self: stretch; justify-content: space-between; }
+.lamina__pe { font-size: 15px; color: var(--inv-2); line-height: 1.5; opacity: .85; }
+
+/* entrada em cascata: a lista aparece de cima para baixo, na ordem de leitura.
+   Sem JS, ou com movimento reduzido, tudo já nasce no lugar. */
+.js .lamina__menu a, .js .lamina__fecho { opacity: 0; transform: translateY(14px); }
+.js .lamina.abrindo .lamina__menu a, .js .lamina.abrindo .lamina__fecho {
+  opacity: 1;
+  transform: none;
+  transition: opacity 420ms ease, transform 520ms cubic-bezier(.16, 1, .3, 1);
+  transition-delay: calc(var(--i, 0) * 55ms + 70ms);
+}
+@media (prefers-reduced-motion: reduce) {
+  .js .lamina__menu a, .js .lamina__fecho { opacity: 1; transform: none; transition: none; }
+}
+
+/* A assinatura entra como arquivo do vetor oficial, nunca como texto montado
+   aqui: o arquivo ja traz o espacamento, o Co. em versalete e as duas cores.
+   O manual pede 90px de largura no minimo e a peca tem 2,76 de proporcao,
+   entao 36px de altura dao 99px e ficam acima do piso. */
+.logo { display: inline-flex; text-decoration: none; }
+
+.logo__marca { display: block; height: 36px; width: auto; }
+
+.logo--pe .logo__marca { height: 46px; }
+
+/* 34px dao 94px de largura: ainda acima dos 90px que o manual exige para a
+   assinatura com o nome. Abaixo disso o certo seria trocar pelo simbolo so. */
+@media (max-width: 479px) { .logo__marca { height: 34px; } }
+
+/* abaixo de 860 o menu horizontal não cabe sem apertar: vira hambúrguer */
+@media (max-width: 859px) {
+  .barra { grid-template-columns: auto auto; justify-content: space-between; }
+  .barra__menu, .botao { display: none; }
+  .hamb { display: inline-flex; }
+}
+@media (max-width: 379px) { .hamb__rotulo { display: none; } }
+
+/* sem ponteiro fino o rolo não tem gatilho: o rótulo fica parado */
+@media (prefers-reduced-motion: reduce) {
+  .elo__rolo > span, .hamb__risco { transition: none; }
+}
+
+/* ==========================================================================
+   ABERTURA
+   ========================================================================== */
+
+.abertura { padding-bottom: clamp(44px, 7vw, 92px); position: relative; }
+
+/* ==========================================================================
+   A GRADE DE FUNDO
+   camada fixa atras de tudo. Tres tratamentos, trocados pela classe do body:
+   .grade-colunas   so as colunas do proprio layout, verticais
+   .grade-quadro    quadriculado corrido, papel milimetrado
+   .grade-abertura  quadriculado so na primeira tela, desvanecendo, com ponto
+                    em cada cruzamento
+   ========================================================================== */
+
+:root { --grade-cor: rgba(21, 23, 26, 0.07); --celula: clamp(44px, 4.4vw, 64px); }
+
+.grade {
+  position: fixed;
+  inset: 0;
+  z-index: -1;
+  pointer-events: none;
+  display: flex;
+  justify-content: center;
+}
+
+/* a area herda o mesmo max-width e o mesmo recuo do conteudo, entao as linhas
+   caem exatamente na margem do texto em vez de passar perto dela */
+.grade__area {
+  position: relative;
+  width: 100%;
+  max-width: var(--wrap);
+  padding-inline: var(--gutter);
+  box-sizing: border-box;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+}
+
+.grade__area > i { display: block; }
+
+.grade-colunas .grade__area > i { border-left: 1px solid var(--grade-cor); }
+.grade-colunas .grade__area > i:last-child { border-right: 1px solid var(--grade-cor); }
+
+/* as verticais ficam paradas: elas e que estao alinhadas a margem do texto,
+   e e esse alinhamento que faz a grade ler como projeto e nao como estampa.
+   So as horizontais derivam, no eixo que nao carrega alinhamento nenhum */
+.grade-quadro .grade__area::before,
+.grade-abertura .grade__area::before {
+  content: "";
+  position: absolute;
+  inset: 0 var(--gutter);
+  background-image: linear-gradient(to right, var(--grade-cor) 1px, transparent 1px);
+  background-size: var(--celula) var(--celula);
+}
+
+/* a camada que anda. Ela e uma celula mais alta que a area e sobe exatamente
+   uma celula por ciclo: no fim do percurso o desenho coincide com o inicio,
+   entao o laco fecha sem salto. So transform, sem repaint */
+.grade__deriva {
+  position: absolute;
+  left: var(--gutter);
+  right: var(--gutter);
+  top: calc(var(--celula) * -1);
+  bottom: calc(var(--celula) * -1);
+  display: none;
+  background-repeat: repeat;
+  background-size: var(--celula) var(--celula);
+  will-change: transform;
+  animation: deriva 19s linear infinite;
+}
+
+@keyframes deriva {
+  from { transform: translate3d(0, 0, 0); }
+  to   { transform: translate3d(0, calc(var(--celula) * -1), 0); }
+}
+
+.grade-quadro .grade__deriva,
+.grade-abertura .grade__deriva {
+  display: block;
+  background-image:
+    linear-gradient(to bottom, var(--grade-cor) 1px, transparent 1px),
+    radial-gradient(circle at 0 0, rgba(21, 23, 26, 0.5) 1.4px, transparent 2px);
+}
+
+/* a grade da abertura pertence a abertura: se ficasse fixa, continuaria
+   colada no alto da tela depois da rolagem. Ancorada no documento, ela sobe
+   junto e fica para tras */
+.grade-abertura .grade {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 128vh;
+  bottom: auto;
+}
+
+.grade-abertura .grade__area::before,
+.grade-abertura .grade__deriva {
+  -webkit-mask: linear-gradient(180deg, #000 0%, #000 34%, transparent 74%);
+          mask: linear-gradient(180deg, #000 0%, #000 34%, transparent 74%);
+}
+
+/* a entrada: a grade se desenha de cima para baixo uma vez, no carregamento.
+   Um gesto que acontece e acaba cansa menos que um laco a mais */
+.js .grade__area::before,
+.js .grade__deriva { animation-name: grade-entra; animation-duration: 1500ms; animation-timing-function: cubic-bezier(0.22, 1, 0.36, 1); animation-fill-mode: both; }
+.js .grade__deriva { animation-name: grade-entra, deriva; animation-duration: 1500ms, 19s; animation-timing-function: cubic-bezier(0.22, 1, 0.36, 1), linear; animation-iteration-count: 1, infinite; animation-delay: 0ms, 1500ms; }
+
+@keyframes grade-entra {
+  from { clip-path: inset(0 0 100% 0); }
+  to   { clip-path: inset(0 0 0 0); }
+}
+
+/* no celular o texto ocupa a largura toda e cai em cima da grade, entao ela
+   enfraquece e morre mais cedo, logo abaixo do titulo */
+@media (max-width: 1023px) {
+  :root { --grade-cor: rgba(21, 23, 26, 0.045); }
+  .grade-abertura .grade { height: 86vh; }
+  .grade-abertura .grade__area::before,
+  .grade-abertura .grade__deriva {
+    -webkit-mask: linear-gradient(180deg, #000 0%, #000 22%, transparent 58%);
+            mask: linear-gradient(180deg, #000 0%, #000 22%, transparent 58%);
+  }
+  .grade-abertura .grade__deriva {
+    background-image:
+      linear-gradient(to bottom, var(--grade-cor) 1px, transparent 1px),
+      radial-gradient(circle at 0 0, rgba(21, 23, 26, 0.34) 1.3px, transparent 1.9px);
+  }
+}
+
+.abertura__titulo { max-width: 15ch; }
+
+/* a última palavra apagada, com régua embaixo, como no layout de referência */
+.regua {
+  display: inline-block;
+  border-bottom: 2px solid var(--rule);
+  padding-bottom: 0.06em;
+}
+
+/* A abertura era uma grade de três colunas com duas frases e um vazio à
+   esquerda. Saíram a linha dos nove clientes e a frase que apontava para ela,
+   então a grade perdeu a razão de existir: sobrou um bloco só.
+   Agora é uma escada encostada na margem esquerda, alinhada com o título:
+   afirmação, explicação, ação. */
+.abertura__base { margin-top: clamp(44px, 7vw, 96px); }
+
+/* O trilho: as quatro frentes deixam de ser um parágrafo corrido e viram a
+   ordem em que o trabalho acontece. Um filete único atravessa as quatro
+   paradas e o ponto de bronze marca cada uma; "briefing" e "no ar" fecham as
+   pontas, então a linha é lida como percurso e não como lista de preços. */
+/* Atenção ao nome: .trilho já existe neste arquivo e é o carrossel da seção
+   de trabalhos, com rolagem lateral e máscara nas pontas. Este bloco é .fluxo
+   justamente para não herdar aquilo. */
+.fluxo {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: clamp(18px, 2.4vw, 34px);
+  max-width: 980px;
+}
+
+/* o filete de cada parada avança por cima do vão até a parada seguinte: é
+   isso que faz os quatro pedaços lerem como uma linha só, sem elemento extra */
+.fluxo__p { position: relative; padding-top: 30px; }
+.fluxo__p::before {
+  content: "";
+  position: absolute;
+  top: 0; left: 0; right: calc(-1 * clamp(18px, 2.4vw, 34px));
+  height: 1px;
+  background: var(--rule);
+}
+.fluxo__p:last-child::before { right: 0; }
+.fluxo__p::after {
+  content: "";
+  position: absolute;
+  top: -3.5px; left: 0;
+  width: 7px; height: 7px;
+  border-radius: 50%;
+  background: var(--bronze);
+}
+
+.fluxo__n { font-size: 11px; font-weight: 500; letter-spacing: 0.16em; color: var(--bronze); }
+.fluxo__t { font-size: clamp(19px, 1.7vw, 24px); line-height: 1.2; letter-spacing: -0.01em; margin: 12px 0 8px; }
+.fluxo__d { font-size: 15px; line-height: 1.5; color: var(--ink-2); margin: 0; max-width: 24ch; }
+
+.fluxo__pontas {
+  display: flex;
+  justify-content: space-between;
+  max-width: 980px;
+  margin-top: 26px;
+  font-size: 11px;
+  font-weight: 500;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  color: var(--fade);
+}
+
+/* a pílula fica logo embaixo do parágrafo e a distância é curta de propósito:
+   os dois têm de ler como um bloco, não como duas ilhas */
+.abertura__rodape {
+  display: flex;
+  align-items: center;
+  margin-top: clamp(26px, 3vw, 40px);
+}
+
+@media (max-width: 1023px) {
+  .abertura__base { margin-top: 40px; }
+}
+
+/* Abaixo de 860 o trilho vira vertical: o mesmo filete, agora descendo pela
+   esquerda com os pontos de bronze. Não é um remendo de celular, é a mesma
+   régua virada de lado. */
+@media (max-width: 859px) {
+  .fluxo { grid-template-columns: 1fr; gap: 0; }
+  .fluxo__p { padding: 18px 0 18px 22px; }
+  .fluxo__p::before { top: 0; bottom: 0; left: 0; right: auto; width: 1px; height: auto; }
+  .fluxo__p:first-child::before { top: 22px; }
+  .fluxo__p:last-child::before { bottom: auto; height: 24px; }
+  .fluxo__p::after { top: 22px; left: -3px; }
+  .fluxo__d { max-width: none; }
+  /* as duas pontas não cabem afastadas numa coluna: viram um intervalo */
+  .fluxo__pontas { justify-content: flex-start; gap: 12px; margin-top: 18px; }
+  .fluxo__pontas span + span::before { content: "— "; color: var(--areia); }
+}
+
+/* imagem de sangria logo abaixo da abertura */
+/* a cortina entra com scale(1.16): sem recorte aqui, a imagem transborda
+   1670px numa janela de 1440 e a página ganha rolagem lateral enquanto anima */
+.sangria {
+  position: relative;
+  width: 100%;
+  overflow: clip;
+  min-height: clamp(260px, 27vw, 400px);
+}
+
+/* a foto e o fundo da secao, recortada em 3.8:1, que e a proporcao em que a
+   faixa trabalha na maior parte das larguras. Assim o cover quase nao corta e
+   a diagonal de luz chega inteira, de canto a canto */
+.sangria__fundo {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+}
+
+@media (max-width: 767px) { .sangria { min-height: clamp(170px, 42vw, 230px); } }
+
+
+/* ==========================================================================
+   SERVIÇOS — quatro colunas separadas por filete
+   ========================================================================== */
+
+/* padding-block, nunca o atalho: estas seções também são .wrap, e o atalho
+   zerava a margem lateral que o .wrap acabou de definir */
+.secao { padding-block: clamp(64px, 9vw, 140px); }
+
+.servicos {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  border-top: 1px solid var(--rule);
+}
+
+.servico {
+  padding: 28px 30px 30px 0;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  border-left: 1px solid var(--rule);
+  padding-left: 30px;
+}
+.servico:first-child { border-left: 0; padding-left: 0; }
+
+.servico__n {
+  width: 54px; height: 54px;
+  border-radius: 14px;
+  background: var(--areia);
+  display: grid;
+  place-items: center;
+  font-size: 15px;
+  font-weight: 500;
+  color: var(--bronze);
+}
+
+.servico__nome { font-size: 23px; font-weight: 400; line-height: 1.12; letter-spacing: -0.025em; }
+.servico p { font-size: 16px; line-height: 1.5; color: var(--ink-2); }
+.servico .sub { font-size: 16px; align-self: flex-start; margin-top: 4px; }
+
+@media (max-width: 1023px) { .servicos { grid-template-columns: repeat(2, minmax(0, 1fr)); } .servico:nth-child(3) { border-left: 0; padding-left: 0; } }
+@media (max-width: 599px)  { .servicos { grid-template-columns: 1fr; } .servico { border-left: 0; padding-left: 0; border-top: 1px solid var(--rule); } .servico:first-child { border-top: 0; } }
+
+/* ==========================================================================
+   TÍTULO EM ESCADA, com a pílula no fim da última linha
+   ========================================================================== */
+
+.escada { display: flex; flex-direction: column; align-items: flex-start; gap: 2px; }
+.escada__l2 { margin-left: clamp(10px, 2.4vw, 34px); }
+.escada__l3 { margin-left: clamp(20px, 4.8vw, 68px); display: flex; flex-wrap: wrap; align-items: center; gap: clamp(14px, 2vw, 28px); }
+/* Em tela estreita o botao ao lado de "e no ar" sobrava 3px da linha de cima e
+   lia como se estivesse grudado no titulo. Desce para a propria linha. */
+@media (max-width: 599px) {
+  .escada__l3 { flex-direction: column; align-items: flex-start; gap: 22px; }
+}
+.escada .pilula__texto { font-size: 15px; padding: 12px 22px; }
+.escada .pilula__seta { width: 40px; height: 40px; }
+
+/* ==========================================================================
+   PORTFÓLIO — cartões grandes de canto redondo, duas colunas
+   ========================================================================== */
+
+.obras__topo { display: flex; align-items: flex-end; justify-content: space-between; gap: var(--gap); }
+
+.obras__setas { display: flex; gap: 10px; flex: none; padding-bottom: 6px; }
+.seta {
+  width: 46px; height: 46px;
+  display: grid; place-items: center;
+  border: 1px solid var(--ink);
+  border-radius: 50%;
+  background: transparent;
+  color: var(--ink);
+  cursor: pointer;
+  transition: background-color 180ms ease, color 180ms ease, opacity 180ms ease;
+}
+.seta:hover { background: var(--ink); color: var(--inv); }
+.seta[aria-disabled="true"] { opacity: 0.28; pointer-events: none; }
+
+/* a faixa: rolagem horizontal nativa, sem barra à vista. O recuo lateral vai
+   no .obras e não no trilho, senão o navegador come o respiro do fim. */
+.trilho {
+  margin-top: clamp(40px, 6vw, 76px);
+  /* --borda alinha o primeiro card com o título; 100% aqui é a largura da
+     janela sem a barra de rolagem, então não cria estouro horizontal.
+     O scroll-padding faz o encaixe parar nessa margem: sem ele o snap puxa
+     o primeiro card para a borda da tela e come o recuo. */
+  --borda: max(calc((100% - var(--wrap)) / 2), 0px);
+  scroll-padding-inline: calc(var(--borda) + var(--gutter));
+  overflow-x: auto;
+  overflow-y: hidden;
+  /* sem encaixe: ele puxaria a faixa de volta a cada quadro do movimento */
+  cursor: grab;
+  -webkit-overflow-scrolling: touch;
+  scrollbar-width: none;
+  overscroll-behavior-x: contain;
+}
+.trilho::-webkit-scrollbar { display: none; }
+
+/* esmaecido nas pontas: em algumas larguras nenhum card corta na borda e nada
+   diz que a faixa continua. A ponta que acabou perde o esmaecido. */
+.trilho { --esfuma: clamp(28px, 4vw, 64px); }
+.js .trilho {
+  mask-image: linear-gradient(to right, transparent 0, #000 var(--esfuma), #000 calc(100% - var(--esfuma)), transparent 100%);
+  -webkit-mask-image: linear-gradient(to right, transparent 0, #000 var(--esfuma), #000 calc(100% - var(--esfuma)), transparent 100%);
+}
+/* a faixa agora dá a volta: as duas pontas esmaecem sempre, porque nunca
+   existe começo nem fim */
+.trilho:focus-visible { outline: 2px solid var(--bronze); outline-offset: 4px; border-radius: 6px; }
+.trilho.arrastando { cursor: grabbing; }
+.trilho.arrastando a { pointer-events: none; }
+
+.obras {
+  display: flex;
+  width: max-content;
+  gap: var(--gap);
+  /* inteiro de propósito: o período da volta é nove vezes (card + vão), e com
+     valor quebrado a emenda cai meio pixel fora e cintila. Navegador sem
+     round() ignora a linha e fica com a de cima. */
+  gap: round(var(--gap), 1px);
+  padding-inline: calc(var(--borda) + var(--gutter));
+}
+
+.obra {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  /* largura escolhida para que um card sempre fique cortado na borda direita:
+     o corte é o que avisa que a faixa continua */
+  flex: 0 0 clamp(258px, 30vw, 440px);
+  flex-basis: round(clamp(258px, 30vw, 440px), 1px);
+}
+
+.obra__moldura {
+  display: block;
+  border-radius: 18px;
+  overflow: hidden;
+  background: var(--ground-2);
+  text-decoration: none;
+}
+
+.obra__moldura img {
+  width: 100%;
+  aspect-ratio: 16 / 10;
+  object-fit: cover;
+  object-position: top;
+  transition: transform 700ms cubic-bezier(.16, 1, .3, 1);
+}
+
+@media (hover: hover) and (pointer: fine) {
+  .obra__moldura:hover img { transform: scale(1.035); }
+  .obra:hover .obra__nome { color: var(--bronze); }
+}
+
+.obra__nome {
+  font-size: var(--d3);
+  font-weight: 400;
+  line-height: 1.1;
+  letter-spacing: -0.03em;
+  transition: color 180ms ease;
+}
+
+.obra__meta { font-size: 15px; color: var(--ink-2); }
+
+/* no toque o dedo já arrasta: as setas só atrapalhariam */
+@media (max-width: 859px) { .obras__setas { display: none; } }
+
+/* ==========================================================================
+   MÉTODO — coluna fixa com numeral gigante e escada de quatro linhas
+   ========================================================================== */
+
+.metodo { display: grid; grid-template-columns: minmax(0, 0.42fr) minmax(0, 1fr); gap: var(--gap); }
+
+.metodo__lado { position: sticky; top: 40px; align-self: start; display: flex; flex-direction: column; gap: clamp(26px, 4vw, 52px); }
+
+.metodo__numeral {
+  font-size: clamp(90px, 13vw, 190px);
+  font-weight: 300;
+  line-height: 0.78;
+  letter-spacing: -0.06em;
+}
+
+.metodo__lista { border-top: 1px dashed var(--rule); }
+
+.passo {
+  display: grid;
+  grid-template-columns: 4.5rem minmax(0, 1fr) minmax(0, 1.1fr);
+  gap: clamp(14px, 2vw, 30px);
+  align-items: start;
+  padding: clamp(22px, 2.6vw, 34px) 0;
+  border-bottom: 1px dashed var(--rule);
+}
+
+/* a escada: cada linha entra um pouco mais à direita */
+.passo--2 { margin-left: clamp(0px, 2.4vw, 34px); }
+.passo--3 { margin-left: clamp(0px, 4.8vw, 68px); }
+.passo--4 { margin-left: clamp(0px, 7.2vw, 102px); }
+
+.passo__n { font-size: 15px; color: var(--ink-2); padding-top: 4px; }
+.passo__nome { font-size: clamp(19px, 1.7vw, 24px); font-weight: 400; letter-spacing: -0.025em; line-height: 1.15; }
+/* :not(.passo__n) porque o número também é um <p>: sem isso ele herda o corpo
+   do texto e, na media query abaixo, cai dentro da célula da descrição */
+.passo p:not(.passo__n) { font-size: 16px; line-height: 1.5; color: var(--ink-2); }
+
+@media (max-width: 1023px) {
+  .metodo { grid-template-columns: 1fr; }
+  .metodo__lado { position: static; flex-direction: row; align-items: flex-end; justify-content: space-between; gap: 20px; }
+  /* duas colunas: o número ocupa as duas linhas, nome em cima e texto embaixo,
+     senão os dois caem na mesma célula e se sobrepõem */
+  .passo { grid-template-columns: 3rem minmax(0, 1fr); row-gap: 8px; }
+  .passo__n { grid-column: 1; grid-row: 1 / span 2; }
+  .passo__nome { grid-column: 2; grid-row: 1; }
+  .passo p:not(.passo__n) { grid-column: 2; grid-row: 2; }
+  .passo--2, .passo--3, .passo--4 { margin-left: 0; }
+}
+
+/* ==========================================================================
+   FAIXA ESCURA — chamada e contagem
+   ========================================================================== */
+
+.escura { background: var(--ink); color: var(--inv); }
+
+/* O padrao de fundo da marca. Nao repete o simbolo: repete o estandarte sem a
+   letra dentro, que e o que impede o fundo de virar um mural de logos.
+   O manual admite tres medidas de ladrilho, 86, 120 e 190px, e nada entre elas.
+   O rodape ocupa a largura inteira, entao e caso de 190px: o desenho fica raro
+   e o fundo volta a ser fundo. A 120px ele vira estampa e disputa com o texto.
+   A cor de fundo vai junto: sem ela a opacidade do ladrilho mente. */
+.escura--padrao {
+  background-color: var(--ink);
+  background-image: url('marca/padrao-sobre-tinta.svg');
+  background-size: 190px auto;
+}
+/* Num celular de 390px, o ladrilho de 190 cabe duas vezes na largura e deixa
+   de ser fundo: volta para 120, a medida de cabecalho e capa. */
+@media (max-width: 599px) { .escura--padrao { background-size: 120px auto; } }
+
+.faixa {
+  display: grid;
+  grid-template-columns: minmax(0, 1.2fr) minmax(0, 1fr);
+  gap: var(--gap);
+  align-items: end;
+  padding-block: clamp(56px, 8vw, 110px);
+}
+
+.faixa__numero { font-size: clamp(76px, 12vw, 170px); font-weight: 300; line-height: 0.8; letter-spacing: -0.05em; }
+.faixa__nota { font-size: 16px; color: var(--inv-2); margin-top: 18px; max-width: 30ch; }
+.faixa .titulo { max-width: 16ch; }
+
+@media (max-width: 859px) { .faixa { grid-template-columns: 1fr; align-items: start; gap: 40px; } }
+
+/* ==========================================================================
+   MARQUISE de clientes
+   ========================================================================== */
+
+.marquise { border-top: 1px solid var(--rule-inv); border-bottom: 1px solid var(--rule-inv); overflow: hidden; }
+
+.marquise__trilho {
+  display: flex;
+  width: max-content;
+  animation: correr 34s linear infinite;
+}
+
+.marquise__grupo { display: flex; align-items: center; }
+
+.marquise__item {
+  font-size: clamp(22px, 2.6vw, 36px);
+  font-weight: 300;
+  letter-spacing: -0.03em;
+  color: var(--inv);
+  padding: 26px clamp(20px, 2.4vw, 36px);
+  white-space: nowrap;
+}
+.marquise__ponto { color: var(--bronze-cl); font-size: 20px; }
+
+@keyframes correr { from { transform: translateX(0); } to { transform: translateX(-50%); } }
+
+@media (prefers-reduced-motion: reduce) { .marquise__trilho { animation: none; } }
+
+/* ==========================================================================
+   ESTÚDIO
+   ========================================================================== */
+
+/* título à esquerda, texto corrido à direita: as duas colunas começam na
+   mesma linha e nenhuma sobra vazia embaixo */
+/* ==========================================================================
+   SOBRE — uma hierarquia só: título, uma linha de posição, três blocos curtos
+   ========================================================================== */
+
+/* Nada de coluna grudada: a esquerda parava e a direita corria, e no fim da
+   seção o bloco saltava. A leitura agora desce em três degraus. */
+.sobre { display: flex; flex-direction: column; gap: clamp(40px, 5vw, 68px); }
+
+.sobre__abre { display: grid; grid-template-columns: minmax(0, 1.05fr) minmax(0, .95fr); gap: var(--gap) clamp(32px, 5vw, 80px); align-items: end; }
+.sobre__titulo { display: flex; flex-direction: column; gap: 18px; align-items: flex-start; }
+/* a linha de posição é o segundo degrau: maior que o corpo do texto e bem
+   menor que o título, para não disputar com ele */
+.sobre__lead { color: var(--ink-2); font-size: clamp(18px, 1.5vw, 21px); line-height: 1.5; max-width: 40ch; }
+.sobre__lead b { color: var(--ink); font-weight: 400; }
+
+/* terceiro degrau: o texto corrido virou três blocos curtos, cada um atrás de
+   um filete e de um rótulo. Quem passa o olho lê só os rótulos e já sabe. */
+.sobre__blocos { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: clamp(26px, 3vw, 44px); }
+.sobre__bloco { display: flex; flex-direction: column; gap: 12px; border-top: 1px solid var(--rule); padding-top: 18px; }
+.sobre__rot { font-size: 12px; letter-spacing: .16em; text-transform: uppercase; color: var(--bronze); }
+.sobre__bloco p:not(.sobre__rot) { color: var(--ink-2); font-size: 16px; line-height: 1.6; }
+
+.sobre__pe { display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: clamp(20px, 3vw, 36px); border-top: 1px solid var(--rule); padding-top: clamp(22px, 3vw, 34px); }
+/* o símbolo fecha a seção ao lado da frase que explica o nome: é o único
+   lugar da página onde a bandeira aparece sozinha e em tamanho de leitura */
+.sobre__nota { display: flex; align-items: center; gap: 16px; max-width: 46ch; }
+.sobre__simbolo { height: 54px; width: auto; flex: none; }
+.sobre__origem { font-size: 14px; line-height: 1.5; color: var(--ink-2); }
+.sobre__palavra { font-style: italic; color: var(--ink); }
+
+.marcas { display: flex; flex-wrap: wrap; gap: 10px; }
+.marca-item { font-size: 14px; border: 1px solid var(--rule); border-radius: 999px; padding: 9px 18px; }
+
+@media (max-width: 1059px) {
+  .sobre__blocos { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+}
+
+@media (max-width: 859px) {
+  .sobre__abre { grid-template-columns: 1fr; align-items: start; }
+  .sobre__blocos { grid-template-columns: 1fr; gap: 22px; }
+  .sobre__pe { align-items: flex-start; }
+}
+
+/* ==========================================================================
+   FECHAMENTO E RODAPÉ
+   ========================================================================== */
+
+.fecho { padding-block: clamp(70px, 11vw, 150px) clamp(50px, 7vw, 90px); }
+.fecho__grade { display: grid; grid-template-columns: minmax(0, 1.3fr) minmax(0, 1fr); gap: var(--gap); align-items: end; }
+.fecho .display { max-width: 12ch; }
+
+/* o fecho precisa de folga antes do filete: sem ela a regua do .rodape__grade
+   passava dentro da descendente do c-cedilha de "comecar" */
+.fecho__grade { padding-bottom: clamp(16px, 2vw, 26px); }
+
+.rodape__grade {
+  display: grid;
+  grid-template-columns: minmax(0, 1.6fr) repeat(2, minmax(0, 1fr));
+  gap: var(--gap);
+  padding: clamp(38px, 4.6vw, 58px) 0 0;
+  border-top: 1px solid var(--rule-inv);
+}
+
+/* rotulo de coluna, nao titulo: peso normal e apagado como as linhas de apoio */
+.rodape__col h3 { font-size: 14px; font-weight: 400; color: var(--inv-2); opacity: .8; margin-bottom: 18px; }
+/* a coluna do telefone perdeu o rotulo, mas guarda a caixa dele: sem isso o
+   numero subiria sozinho e quebraria a linha de base das outras colunas */
+.rodape__col h3[aria-hidden] { visibility: hidden; }
+/* a coluna da marca deixa de ser um logo com 200px de vazio embaixo */
+.rodape__col--marca { display: flex; flex-direction: column; gap: 20px; align-items: start; }
+/* a linha da marca nao disputa com a assinatura logo acima: mesmo peso apagado
+   do resto do rodape */
+.rodape__linha { color: var(--inv-2); font-size: 14px; line-height: 1.55; max-width: 34ch; margin: 0; opacity: .8; }
+.rodape__col li { margin-bottom: 6px; font-size: 16px; }
+/* inline-block com respiro vertical: a linha de texto sozinha dava 23px de
+   alvo de toque, abaixo dos 24px que o dedo precisa */
+.rodape__col a { text-decoration: none; }
+/* inline-block com respiro vertical: a linha de texto sozinha dava 23px de
+   alvo de toque, abaixo dos 24px que o dedo precisa. Só nos itens de lista:
+   no logo isso anularia o inline-flex e partiria o wordmark. */
+.rodape__col li a { display: inline-block; padding-block: 4px; }
+/* No rodape o sublinhado de todo link virava uma cerca de riscos embaixo das
+   quatro colunas. Fica so a mudanca de cor no hover e o contorno no foco. */
+.rodape__col a.sub, .rodape__legal a.sub { background-image: none; padding-bottom: 0; }
+.rodape__col a:hover, .rodape__legal a:hover { color: var(--bronze-cl); }
+
+.rodape__legal {
+  display: flex; flex-wrap: wrap; justify-content: space-between; gap: 14px;
+  margin-top: clamp(34px, 4.2vw, 54px);
+  padding-bottom: 8px;
+  font-size: 14px; color: var(--inv-2);
+}
+
+/* o e-mail longo não encolhe sozinho e empurra a grade a 320px */
+.rodape__col li, .rodape__col li a { overflow-wrap: anywhere; }
+
+@media (max-width: 859px) {
+  .fecho__grade { grid-template-columns: 1fr; align-items: start; gap: 34px; }
+  .rodape__grade { grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); row-gap: 40px; }
+  .rodape__col--marca { grid-column: 1 / -1; flex-direction: column; align-items: start; gap: 18px; }
+}
+/* Fale e Onde tem duas linhas cada: lado a lado mesmo no celular, com a marca
+   ocupando a linha inteira acima. Empilhados, custavam 120px de rolagem a toa */
+@media (max-width: 599px) { .rodape__grade { column-gap: 20px; } }
+/* abaixo de 380px a coluna fica com 140px e "Novo Hamburgo / RS" quebra
+   deixando a barra pendurada sozinha. Ai vale mais empilhar */
+@media (max-width: 379px) { .rodape__grade { grid-template-columns: minmax(0, 1fr); } }
+
+/* ==========================================================================
+   EFEITOS
+   Os mesmos gestos do layout de referência, escritos à mão: título que sobe
+   palavra por palavra, bloco que entra subindo, imagem que abre em cortina,
+   contador que roda e cursor que reage. Sem biblioteca externa.
+   Nada disso é necessário para ler a página: sem script, tudo já está visível.
+   ========================================================================== */
+
+/* palavras do título, dentro de uma máscara */
+.pal {
+  display: inline-block;
+  overflow: hidden;
+  vertical-align: bottom;
+  padding-bottom: 0.14em;
+  margin-bottom: -0.14em;
+}
+.pal > i {
+  display: inline-block;
+  font-style: inherit;
+  transform: translateY(110%);
+  transition: transform 1s cubic-bezier(.16, 1, .3, 1);
+  transition-delay: var(--atraso, 0ms);
+}
+.js [data-sobe].dentro .pal > i { transform: none; }
+
+/* blocos que entram subindo */
+.js [data-entra] {
+  opacity: 0;
+  transform: translateY(28px);
+  transition: opacity .9s cubic-bezier(.16, 1, .3, 1), transform .9s cubic-bezier(.16, 1, .3, 1);
+  transition-delay: var(--atraso, 0ms);
+}
+.js [data-entra].dentro { opacity: 1; transform: none; }
+
+/* Imagem que abre em cortina, de baixo para cima.
+   A cortina vai na IMAGEM, nunca no recipiente observado: o IntersectionObserver
+   calcula a interseção depois do recorte, então um recipiente recortado a zero
+   nunca dispara o próprio gatilho que o abriria. */
+.js [data-cortina] img {
+  clip-path: inset(0 0 100% 0);
+  transition: clip-path 1.15s cubic-bezier(.16, 1, .3, 1), transform 1.5s cubic-bezier(.16, 1, .3, 1);
+  --s: 1.16;
+}
+.js [data-cortina].dentro img { clip-path: inset(0 0 0 0); --s: 1; }
+
+.obra__moldura img,
+.sangria img { transform: scale(var(--s, 1)); }
+.sangria img { transition: transform 1.5s cubic-bezier(.16, 1, .3, 1); }
+
+/* o cursor do tema: um ponto e um anel que persegue */
+.cursor-ponto, .cursor-anel {
+  position: fixed;
+  top: 0; left: 0;
+  border-radius: 999px;
+  pointer-events: none;
+  z-index: 99;
+  opacity: 0;
+  transition: opacity 240ms ease;
+}
+.cursor-ponto {
+  width: 7px; height: 7px;
+  background: var(--ink);
+  margin: -3.5px 0 0 -3.5px;
+}
+.cursor-anel {
+  width: 38px; height: 38px;
+  border: 1px solid var(--ink);
+  margin: -19px 0 0 -19px;
+  transition: opacity 240ms ease, width 260ms cubic-bezier(.16,1,.3,1), height 260ms cubic-bezier(.16,1,.3,1),
+              margin 260ms cubic-bezier(.16,1,.3,1), background-color 260ms ease, border-color 260ms ease;
+}
+.cursor-ligado .cursor-ponto, .cursor-ligado .cursor-anel { opacity: 1; }
+.cursor-sobre .cursor-anel {
+  width: 70px; height: 70px;
+  margin: -35px 0 0 -35px;
+  background: rgba(138, 98, 54, 0.12);
+  border-color: var(--bronze);
+}
+.cursor-sobre .cursor-ponto { opacity: 0; }
+/* sobre o escuro o cursor inverte */
+.cursor-claro .cursor-ponto { background: var(--inv); }
+.cursor-claro .cursor-anel { border-color: var(--inv); }
+
+@media (hover: none), (pointer: coarse) { .cursor-ponto, .cursor-anel { display: none; } }
+
+/* o hover da capa vem depois da cortina, senão a escala da revelação vence */
+@media (hover: hover) and (pointer: fine) {
+  .obra__moldura:hover img { --s: 1.035; }
+}
+
+/* quem pediu menos movimento não recebe nenhum */
+@media (prefers-reduced-motion: reduce) {
+  .js [data-sobe] .pal > i,
+  .js [data-entra],
+  .js [data-cortina] { transform: none !important; opacity: 1 !important; clip-path: none !important; transition: none !important; }
+  .marquise__trilho { animation: none; }
+  .js .grade__area::before, .js .grade__deriva { animation: none; clip-path: none; }
+  .cursor-ponto, .cursor-anel { display: none; }
+}
+</style>
+</head>
+<body class="grade-abertura">
+
+<a class="pular" href="#inicio">Pular para o conteúdo</a>
+
+<div class="grade" aria-hidden="true">
+  <div class="grade__area">
+    <i></i><i></i><i></i><i></i>
+    <span class="grade__deriva"></span>
+  </div>
+</div>
+
+<header class="topo">
+  <div class="wrap">
+    <div class="barra">
+      <a class="logo" href="#inicio" aria-label="Vexil Co., voltar ao inicio">
+        <img class="logo__marca" src="marca/assinatura-primaria.svg" alt="Vexil Co." width="2038" height="738">
+      </a>
+
+      <nav class="barra__menu" aria-label="Seções">
+        <a class="elo" href="#trabalhos"><span class="elo__rolo"><span>Trabalhos</span><span aria-hidden="true">Trabalhos</span></span></a>
+        <a class="elo" href="#servicos"><span class="elo__rolo"><span>Serviços</span><span aria-hidden="true">Serviços</span></span></a>
+        <a class="elo" href="#metodo"><span class="elo__rolo"><span>Método</span><span aria-hidden="true">Método</span></span></a>
+        <a class="elo" href="#sobre"><span class="elo__rolo"><span>Sobre</span><span aria-hidden="true">Sobre</span></span></a>
+      </nav>
+
+      <div class="barra__fim">
+        <!-- "Falar com a Vexil" e nao "com o estúdio": a marca assina Vexil Co.
+             e esse e o rótulo que o manual da identidade já usa no exemplo de
+             barra de navegação. Ver identidade/manual-vexil-co.html, seção 06. -->
+        <a class="botao" href="#contato">Falar com a Vexil</a>
+        <button class="hamb" type="button" aria-expanded="false" aria-controls="menu-movel">
+          <span class="hamb__icone" aria-hidden="true">
+            <span class="hamb__risco"></span>
+            <span class="hamb__risco"></span>
+          </span>
+          <span class="hamb__rotulo">Menu</span>
+        </button>
+      </div>
+    </div>
+  </div>
+</header>
+
+<!-- sobreposição do celular: sem JS ela nunca abre, e o menu da barra continua
+     sendo a navegação, então a página não fica sem caminho -->
+<!-- A lamina repete o menu do desktop e nada alem dele: mesmos quatro itens
+     e o mesmo botao. "Contato" saiu porque o botao ja leva ao fecho, que e
+     onde mora o WhatsApp. -->
+<div class="lamina" id="menu-movel" role="dialog" aria-modal="true" aria-label="Menu" tabindex="-1" hidden>
+  <div>
+    <p class="etiqueta lamina__rotulo">Seções</p>
+    <nav class="lamina__menu" aria-label="Seções">
+      <a href="#trabalhos" style="--i: 0"><span class="lamina__n">01</span><span class="lamina__nome">Trabalhos</span><span class="lamina__seta" aria-hidden="true"><svg width="16" height="16" viewBox="0 0 15 15" fill="none"><path d="M4 11 11 4M11 4H5.4M11 4v5.6" stroke="currentColor" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round"/></svg></span></a>
+      <a href="#servicos" style="--i: 1"><span class="lamina__n">02</span><span class="lamina__nome">Serviços</span><span class="lamina__seta" aria-hidden="true"><svg width="16" height="16" viewBox="0 0 15 15" fill="none"><path d="M4 11 11 4M11 4H5.4M11 4v5.6" stroke="currentColor" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round"/></svg></span></a>
+      <a href="#metodo" style="--i: 2"><span class="lamina__n">03</span><span class="lamina__nome">Método</span><span class="lamina__seta" aria-hidden="true"><svg width="16" height="16" viewBox="0 0 15 15" fill="none"><path d="M4 11 11 4M11 4H5.4M11 4v5.6" stroke="currentColor" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round"/></svg></span></a>
+      <a href="#sobre" style="--i: 3"><span class="lamina__n">04</span><span class="lamina__nome">Sobre</span><span class="lamina__seta" aria-hidden="true"><svg width="16" height="16" viewBox="0 0 15 15" fill="none"><path d="M4 11 11 4M11 4H5.4M11 4v5.6" stroke="currentColor" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round"/></svg></span></a>
+    </nav>
+  </div>
+  <div class="lamina__fecho" style="--i: 4">
+    <a class="pilula pilula--inv lamina__cta" href="#contato">
+      <span class="pilula__texto">Falar com a Vexil</span>
+      <span class="pilula__seta" aria-hidden="true">
+        <svg width="15" height="15" viewBox="0 0 15 15" fill="none"><path d="M4 11 11 4M11 4H5.4M11 4v5.6" stroke="currentColor" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round"/></svg>
+      </span>
+    </a>
+    <p class="lamina__pe">Novo Hamburgo / RS<br>presencial e remoto</p>
+  </div>
+</div>
+
+<main id="inicio">
+
+  <section class="wrap abertura" aria-labelledby="h1">
+    <h1 class="display abertura__titulo" id="h1" data-sobe>Sites e marcas que as pessoas <span class="apagado regua">seguem</span></h1>
+
+    <div class="abertura__base" data-entra style="--atraso: 260ms">
+      <!-- As quatro frentes na ordem em que acontecem, não na ordem da antiga
+           frase corrida. É a mesma oferta de sempre, lida como percurso.
+
+           Tom: o trilho diz ONDE o trabalho passa, nunca COMO. A descrição de
+           processo fica para a conversa com o cliente, porque na página ela
+           entrega o método de graça e ainda mata o assunto antes da reunião.
+           Por isso nenhuma linha fala de ferramenta, prazo ou etapa interna.
+           A espinha é a marca como sujeito: ela se apresenta, recebe, se move
+           e chega. -->
+      <div class="fluxo">
+        <div class="fluxo__p">
+          <span class="fluxo__n">01</span>
+          <p class="fluxo__t">Identidade</p>
+          <p class="fluxo__d">Como a marca se apresenta: nome, símbolo, cor e as regras que a mantêm inteira.</p>
+        </div>
+        <div class="fluxo__p">
+          <span class="fluxo__n">02</span>
+          <p class="fluxo__t">Site</p>
+          <p class="fluxo__d">Onde ela recebe quem chega e conduz até a decisão, sem ruído.</p>
+        </div>
+        <div class="fluxo__p">
+          <span class="fluxo__n">03</span>
+          <p class="fluxo__t">Vídeo</p>
+          <p class="fluxo__d">Como ela se move, onde a imagem parada não alcança.</p>
+        </div>
+        <div class="fluxo__p">
+          <span class="fluxo__n">04</span>
+          <p class="fluxo__t">Mídia paga</p>
+          <p class="fluxo__d">Até onde ela chega, e quanto disso volta em contato real.</p>
+        </div>
+      </div>
+      <p class="fluxo__pontas"><span>Briefing</span><span>No ar</span></p>
+    </div>
+
+    <div class="abertura__rodape" data-entra style="--atraso: 380ms">
+      <!-- A linha com os nove nomes saiu daqui para a abertura respirar. Os
+           nove sites continuam clicáveis nas capturas da seção Trabalhos. -->
+      <a class="pilula" href="#contato">
+        <span class="pilula__texto">Agendar conversa</span>
+        <span class="pilula__seta" aria-hidden="true">
+          <svg width="15" height="15" viewBox="0 0 15 15" fill="none"><path d="M4 11 11 4M11 4H5.4M11 4v5.6" stroke="currentColor" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        </span>
+      </a>
+    </div>
+  </section>
+
+  <section class="sangria" data-cortina aria-label="A origem do nome">
+    <img class="sangria__fundo"
+         src="img/luz-parede-1800.webp"
+         srcset="img/luz-parede-900.webp 900w, img/luz-parede-1800.webp 1800w"
+         sizes="100vw"
+         alt="Uma lâmina de luz do sol atravessando em diagonal uma parede de reboco cru" width="1800" height="474">
+  </section>
+
+  <section id="servicos" class="wrap secao" aria-labelledby="h-servicos">
+    <div class="escada" data-sobe style="margin-bottom: clamp(34px, 5vw, 62px)">
+      <h2 class="titulo" id="h-servicos">O que entra</h2>
+      <span class="titulo escada__l2 apagado">em cada <span class="italico">projeto</span></span>
+    </div>
+
+    <div class="servicos" data-grupo>
+      <article class="servico" data-entra>
+        <span class="servico__n">01</span>
+        <h3 class="servico__nome">Sites e<br>sistemas</h3>
+        <p>Site novo do zero, loja virtual ou sistema sob medida. Código próprio, sem construtor.</p>
+        <a class="sub" href="#trabalhos">Ver no portfólio</a>
+      </article>
+      <article class="servico" data-entra>
+        <span class="servico__n">02</span>
+        <h3 class="servico__nome">Identidade<br>visual</h3>
+        <p>Marca, tipografia, paleta e os materiais que sustentam a promessa em cada ponto de contato.</p>
+        <a class="sub" href="#sobre">Como trabalho</a>
+      </article>
+      <article class="servico" data-entra>
+        <span class="servico__n">03</span>
+        <h3 class="servico__nome">Tráfego<br>pago</h3>
+        <p>Campanhas montadas e acompanhadas mês a mês, com leitura de resultado e ajuste de rota.</p>
+        <a class="sub" href="#trabalhos">Ver no portfólio</a>
+      </article>
+      <article class="servico" data-entra>
+        <span class="servico__n">04</span>
+        <h3 class="servico__nome">CRM e<br>integração</h3>
+        <p>O lead que chega pelo site entra no CRM e não se perde. Integração e fluxo ponta a ponta.</p>
+        <a class="sub" href="#trabalhos">Ver no portfólio</a>
+      </article>
+    </div>
+  </section>
+
+  <!-- o cabeçalho fica no .wrap, a faixa corre solta até a borda direita:
+       o corte no fim da tela é o que diz que tem mais projeto para o lado -->
+  <section id="trabalhos" class="secao" style="padding-top: 0" aria-labelledby="h-trabalhos">
+   <div class="wrap obras__topo">
+    <div class="escada" data-sobe>
+      <h2 class="titulo apagado" id="h-trabalhos">Nove negócios com a</h2>
+      <span class="titulo escada__l2">presença <span class="italico apagado">digital refeita</span></span>
+      <span class="titulo escada__l3 apagado">
+        <span>e no ar</span>
+        <a class="pilula" href="#contato">
+          <span class="pilula__texto" style="color: var(--ink); border-color: var(--ink)">Quero o meu</span>
+          <span class="pilula__seta" style="color: var(--ink); border-color: var(--ink)" aria-hidden="true">
+            <svg width="14" height="14" viewBox="0 0 15 15" fill="none"><path d="M4 11 11 4M11 4H5.4M11 4v5.6" stroke="currentColor" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          </span>
+        </a>
+      </span>
+    </div>
+
+    <div class="obras__setas">
+      <button class="seta" type="button" data-obras="-1" aria-label="Projetos anteriores">
+        <svg width="16" height="16" viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="M10 3 5 8l5 5" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/></svg>
+      </button>
+      <button class="seta" type="button" data-obras="1" aria-label="Próximos projetos">
+        <svg width="16" height="16" viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="M6 3l5 5-5 5" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/></svg>
+      </button>
+    </div>
+   </div>
+
+   <!-- a faixa inteira entra de uma vez: card a card, os que nascem fora da
+        tela à direita nunca cruzam o observador e ficariam apagados -->
+   <div class="trilho" data-entra tabindex="0" role="region" aria-label="Projetos no ar. Arraste para o lado ou use as setas do teclado.">
+    <div class="obras">
+
+      <article class="obra">
+        <a class="obra__moldura" href="https://dalrinegociosimobiliarios.com.br/" target="_blank" rel="noopener">
+          <img src="img/dal-ri.jpg" alt="Página inicial do site da Dal Ri Negócios Imobiliários" width="1440" height="900" loading="lazy" decoding="async">
+        </a>
+        <h3 class="obra__nome">Dal Ri</h3>
+        <p class="obra__meta">Imobiliária de alto padrão — site, CRM e tráfego pago</p>
+      </article>
+
+      <article class="obra">
+        <a class="obra__moldura" href="https://valmirdasilva.github.io/portfolio/buriti-garden-main/index.html" target="_blank" rel="noopener">
+          <img src="img/buriti-garden.jpg" alt="Página inicial do site do Residencial Buriti Garden Premium" width="1440" height="900" loading="lazy" decoding="async">
+        </a>
+        <h3 class="obra__nome">Buriti Garden</h3>
+        <p class="obra__meta">Loteamento de alto padrão — lançamento e captação</p>
+      </article>
+
+      <article class="obra">
+        <a class="obra__moldura" href="https://uniccobyunimed.com/" target="_blank" rel="noopener">
+          <img src="img/unicco-senior-living.jpg" alt="Página inicial do site do ÚNICCO Senior Living by Unimed" width="1440" height="900" loading="lazy" decoding="async">
+        </a>
+        <h3 class="obra__nome">ÚNICCO Senior Living</h3>
+        <p class="obra__meta">Senior living da Unimed — pré-lançamento para investidores</p>
+      </article>
+
+      <article class="obra">
+        <a class="obra__moldura" href="https://condominiohorizonclube.com/" target="_blank" rel="noopener">
+          <img src="img/residencial-horizon.jpg" alt="Página inicial do site do Condomínio Horizon Clube Residencial" width="1440" height="900" loading="lazy" decoding="async">
+        </a>
+        <h3 class="obra__nome">Horizon Clube</h3>
+        <p class="obra__meta">Condomínio clube no Vale do Sinos — captação</p>
+      </article>
+
+      <article class="obra">
+        <a class="obra__moldura" href="https://lancamentomauriciocardoso.com.br/" target="_blank" rel="noopener">
+          <img src="img/bosque-wellness-living.jpg" alt="Página inicial do site do Bosque Wellness Living" width="1440" height="900" loading="lazy" decoding="async">
+        </a>
+        <h3 class="obra__nome">Bosque Wellness Living</h3>
+        <p class="obra__meta">Lançamento residencial em Novo Hamburgo</p>
+      </article>
+
+      <article class="obra">
+        <a class="obra__moldura" href="https://valmirdasilva.github.io/portfolio/Daniela-dalberto-main/index.html" target="_blank" rel="noopener">
+          <img src="img/daniela-dalberto.jpg" alt="Página inicial do site da advogada Daniela Dalberto" width="1440" height="900" loading="lazy" decoding="async">
+        </a>
+        <h3 class="obra__nome">Daniela Dalberto</h3>
+        <p class="obra__meta">Advocacia de família e sucessões — reformulação de site</p>
+      </article>
+
+      <article class="obra">
+        <a class="obra__moldura" href="https://valmirdasilva.github.io/portfolio/Carolina-Guaragna-main/index.html" target="_blank" rel="noopener">
+          <img src="img/carolina-guaragna.jpg" alt="Página inicial do site de Carolina Guaragna" width="1440" height="900" loading="lazy" decoding="async">
+        </a>
+        <h3 class="obra__nome">Carolina Guaragna</h3>
+        <p class="obra__meta">Psicologia e psicanálise — site e agendamento</p>
+      </article>
+
+      <article class="obra">
+        <a class="obra__moldura" href="https://valmirdasilva.github.io/portfolio/cleo-ribeiro-main/index.html" target="_blank" rel="noopener">
+          <img src="img/cleo-ribeiro.jpg" alt="Página inicial do site de Cleo Ribeiro" width="1440" height="900" loading="lazy" decoding="async">
+        </a>
+        <h3 class="obra__nome">Cleo Ribeiro</h3>
+        <p class="obra__meta">Psicologia clínica — adultos, crianças e seção infantil</p>
+      </article>
+
+      <article class="obra">
+        <a class="obra__moldura" href="https://valmirdasilva.github.io/portfolio/formato-contabil-main/index.html" target="_blank" rel="noopener">
+          <img src="img/formato-contabil.jpg" alt="Página inicial do site da Formato Contábil" width="1440" height="900" loading="lazy" decoding="async">
+        </a>
+        <h3 class="obra__nome">Formato Contábil</h3>
+        <p class="obra__meta">Contabilidade — prova social e Área do Cliente</p>
+      </article>
+
+    </div>
+   </div>
+  </section>
+
+  <section id="metodo" class="wrap secao" style="padding-top: 0" aria-labelledby="h-metodo">
+    <div class="metodo">
+      <div class="metodo__lado">
+        <p class="etiqueta" id="h-metodo">Método,<br>na ordem</p>
+        <p class="metodo__numeral" data-entra>04</p>
+      </div>
+
+      <div class="metodo__lista" data-grupo>
+        <div data-entra class="passo passo--1">
+          <p class="passo__n">01</p>
+          <h3 class="passo__nome">Diagnóstico</h3>
+          <p>Mercado, concorrência e o que seus clientes já dizem sobre você. Uma leitura honesta de onde a marca está.</p>
+        </div>
+        <div data-entra class="passo passo--2">
+          <p class="passo__n">02</p>
+          <h3 class="passo__nome">Posição</h3>
+          <p>Para quem, contra quem e com que promessa. É a etapa que define preço, discurso e o que não fazer.</p>
+        </div>
+        <div data-entra class="passo passo--3">
+          <p class="passo__n">03</p>
+          <h3 class="passo__nome">Sistema</h3>
+          <p>Marca, verbal e visual: nome, identidade, tom de voz e os materiais que sustentam a promessa.</p>
+        </div>
+        <div data-entra class="passo passo--4">
+          <p class="passo__n">04</p>
+          <h3 class="passo__nome">Ativação</h3>
+          <p>Conteúdo e mídia paga levando a marca para fora, com leitura de resultado mês a mês.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="escura" aria-labelledby="h-contagem">
+    <div class="wrap faixa">
+      <div>
+        <h2 class="titulo" id="h-contagem" data-sobe>Nove marcas que saíram do genérico</h2>
+        <a class="pilula pilula--inv" href="#contato" style="margin-top: clamp(28px, 4vw, 44px)">
+          <span class="pilula__texto">Começar o seu</span>
+          <span class="pilula__seta" aria-hidden="true">
+            <svg width="15" height="15" viewBox="0 0 15 15" fill="none"><path d="M4 11 11 4M11 4H5.4M11 4v5.6" stroke="currentColor" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          </span>
+        </a>
+      </div>
+      <div>
+        <p class="faixa__numero" data-contar="9">09</p>
+        <p class="faixa__nota">negócios no ar, do site à gestão de tráfego, todos clicáveis nesta página.</p>
+      </div>
+    </div>
+
+    <div class="marquise">
+      <div class="marquise__trilho">
+        <div class="marquise__grupo" aria-hidden="false">
+          <span class="marquise__item">Dal Ri</span><span class="marquise__item marquise__ponto">●</span>
+          <span class="marquise__item">Buriti Garden</span><span class="marquise__item marquise__ponto">●</span>
+          <span class="marquise__item">Daniela Dalberto</span><span class="marquise__item marquise__ponto">●</span>
+          <span class="marquise__item">Carolina Guaragna</span><span class="marquise__item marquise__ponto">●</span>
+          <span class="marquise__item">Cleo Ribeiro</span><span class="marquise__item marquise__ponto">●</span>
+          <span class="marquise__item">Formato Contábil</span><span class="marquise__item marquise__ponto">●</span>
+          <span class="marquise__item">ÚNICCO Senior Living</span><span class="marquise__item marquise__ponto">●</span>
+          <span class="marquise__item">Horizon Clube</span><span class="marquise__item marquise__ponto">●</span>
+          <span class="marquise__item">Bosque Wellness Living</span><span class="marquise__item marquise__ponto">●</span>
+        </div>
+        <div class="marquise__grupo" aria-hidden="true">
+          <span class="marquise__item">Dal Ri</span><span class="marquise__item marquise__ponto">●</span>
+          <span class="marquise__item">Buriti Garden</span><span class="marquise__item marquise__ponto">●</span>
+          <span class="marquise__item">Daniela Dalberto</span><span class="marquise__item marquise__ponto">●</span>
+          <span class="marquise__item">Carolina Guaragna</span><span class="marquise__item marquise__ponto">●</span>
+          <span class="marquise__item">Cleo Ribeiro</span><span class="marquise__item marquise__ponto">●</span>
+          <span class="marquise__item">Formato Contábil</span><span class="marquise__item marquise__ponto">●</span>
+          <span class="marquise__item">ÚNICCO Senior Living</span><span class="marquise__item marquise__ponto">●</span>
+          <span class="marquise__item">Horizon Clube</span><span class="marquise__item marquise__ponto">●</span>
+          <span class="marquise__item">Bosque Wellness Living</span><span class="marquise__item marquise__ponto">●</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="sobre" class="wrap secao" aria-labelledby="h-sobre">
+    <div class="sobre">
+      <div class="sobre__abre">
+        <div class="sobre__titulo">
+          <p class="etiqueta" style="color: var(--ink-2)">Sobre</p>
+          <h2 class="titulo" id="h-sobre" data-sobe>Quem ergue<br>o estandarte</h2>
+        </div>
+        <p class="sobre__lead">Para marcas que já têm produto bom e ainda não têm quem as siga.
+          <b>Quem me procura entrega bem e aparece mal.</b></p>
+      </div>
+
+      <div class="sobre__blocos" data-grupo>
+        <div class="sobre__bloco" data-entra>
+          <p class="sobre__rot">O que acontece</p>
+          <p>O concorrente menor parece maior, e o preço precisa ser defendido em toda reunião.</p>
+        </div>
+        <div class="sobre__bloco" data-entra>
+          <p class="sobre__rot">O que eu fecho</p>
+          <p>A distância entre o que a conversa promete e o que o site sustenta.</p>
+        </div>
+        <div class="sobre__bloco" data-entra>
+          <p class="sobre__rot">Como a empresa chega</p>
+          <p>Nome, identidade e site saem da mesma decisão, então ela chega inteira onde o cliente encontrar você.</p>
+        </div>
+      </div>
+
+      <div class="sobre__pe">
+        <div class="marcas">
+          <span class="marca-item">9 negócios no ar</span>
+          <span class="marca-item">dev + design</span>
+          <span class="marca-item">Novo Hamburgo / RS</span>
+        </div>
+        <div class="sobre__nota">
+          <img class="sobre__simbolo" src="marca/simbolo-primario.svg" alt="" aria-hidden="true" width="524" height="634">
+          <p class="sobre__origem"><span class="sobre__palavra">Vexillum</span> era o estandarte erguido à frente da legião romana. O sinal que dizia quem avançava, e para onde.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<footer id="contato" class="escura escura--padrao">
+  <div class="wrap fecho">
+    <div class="fecho__grade">
+      <h2 class="display" data-sobe>Vamos começar o <span class="apagado">seu</span></h2>
+      <div>
+        <p class="corpo" style="color: var(--inv-2); margin-bottom: 26px; max-width: 34ch">Uma conversa de 30 minutos basta para saber se faz sentido. Sem apresentação de agência.</p>
+        <a class="pilula pilula--inv" href="https://wa.me/5551992017588" target="_blank" rel="noopener">
+          <span class="pilula__texto">Chamar no WhatsApp</span>
+          <span class="pilula__seta" aria-hidden="true">
+            <svg width="15" height="15" viewBox="0 0 15 15" fill="none"><path d="M4 11 11 4M11 4H5.4M11 4v5.6" stroke="currentColor" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          </span>
+        </a>
+      </div>
+    </div>
+
+    <div class="rodape__grade">
+      <div class="rodape__col rodape__col--marca">
+        <a class="logo logo--pe" href="#inicio" aria-label="Vexil Co., voltar ao inicio">
+          <img class="logo__marca" src="marca/assinatura-inversa.svg" alt="Vexil Co." width="2038" height="738">
+        </a>
+        <p class="rodape__linha">Marca, site e anúncio no mesmo lugar, com a mesma assinatura.</p>
+      </div>
+      <div class="rodape__col">
+        <h3>Navegar</h3>
+        <ul>
+          <li><a class="sub" href="#trabalhos">Trabalhos</a></li>
+          <li><a class="sub" href="#servicos">Serviços</a></li>
+          <li><a class="sub" href="#metodo">Método</a></li>
+          <li><a class="sub" href="#sobre">Sobre</a></li>
+          <li><a class="sub" href="#contato">Contato</a></li>
+        </ul>
+      </div>
+      <!-- A coluna do telefone saiu: o numero ja esta no botao "Chamar no
+           WhatsApp" logo acima e no menu de celular. Quando a Vexil tiver
+           Instagram, ele volta aqui como quarta coluna. -->
+      <div class="rodape__col">
+        <h3>Onde</h3>
+        <ul>
+          <li>Novo Hamburgo / RS</li>
+          <li>Presencial e remoto</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="rodape__legal">
+      <span>© 2026 Vexil Co.</span>
+      <a class="sub" href="#inicio">Voltar ao topo</a>
+    </div>
+  </div>
+</footer>
+
+<script>
+/* ==========================================================================
+   Efeitos. Progressive enhancement: a classe .js só entra se o script rodar,
+   então sem JS, com erro ou com movimento reduzido a página fica legível e
+   completa. Nada aqui segura a rolagem.
+   ========================================================================== */
+(function () {
+  'use strict';
+
+  var menosMovimento = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  var raiz = document.documentElement;
+  raiz.classList.add('js');
+
+  /* ---------- 1. títulos: cada palavra sobe de dentro de uma máscara ---------- */
+  function fatiar(alvo) {
+    var i = 0;
+    var andar = function (no) {
+      var filhos = Array.prototype.slice.call(no.childNodes);
+      filhos.forEach(function (n) {
+        if (n.nodeType === 3) {
+          var texto = n.textContent;
+          if (!texto.trim()) return;
+          var frag = document.createDocumentFragment();
+          texto.split(/(\s+)/).forEach(function (pedaco) {
+            if (!pedaco) return;
+            if (!pedaco.trim()) { frag.appendChild(document.createTextNode(pedaco)); return; }
+            var fora = document.createElement('span');
+            fora.className = 'pal';
+            var dentro = document.createElement('i');
+            dentro.textContent = pedaco;
+            dentro.style.setProperty('--atraso', (i * 55) + 'ms');
+            i++;
+            fora.appendChild(dentro);
+            frag.appendChild(fora);
+          });
+          no.replaceChild(frag, n);
+        } else if (n.nodeType === 1 && !n.classList.contains('pal') && n.tagName !== 'BR') {
+          andar(n);
+        }
+      });
+    };
+    andar(alvo);
+  }
+
+  if (!menosMovimento) {
+    document.querySelectorAll('[data-sobe]').forEach(fatiar);
+  }
+
+  /* ---------- 2. quem entra na tela acende ---------- */
+  var observador = null;
+  if ('IntersectionObserver' in window && !menosMovimento) {
+    observador = new IntersectionObserver(function (entradas) {
+      entradas.forEach(function (e) {
+        if (!e.isIntersecting) return;
+        e.target.classList.add('dentro');
+        observador.unobserve(e.target);
+      });
+    }, { rootMargin: '0px 0px -12% 0px', threshold: 0.12 });
+
+    document.querySelectorAll('[data-sobe], [data-entra], [data-cortina]').forEach(function (el) {
+      observador.observe(el);
+    });
+
+    /* escalona os irmãos de um mesmo grupo */
+    document.querySelectorAll('[data-grupo]').forEach(function (grupo) {
+      Array.prototype.slice.call(grupo.children).forEach(function (filho, n) {
+        filho.style.setProperty('--atraso', (n * 90) + 'ms');
+      });
+    });
+  } else {
+    document.querySelectorAll('[data-sobe], [data-entra], [data-cortina]').forEach(function (el) {
+      el.classList.add('dentro');
+    });
+  }
+
+  /* a abertura não espera rolagem: entra ao carregar */
+  requestAnimationFrame(function () {
+    document.querySelectorAll('.abertura [data-sobe], .abertura [data-entra]').forEach(function (el) {
+      el.classList.add('dentro');
+    });
+  });
+
+  /* ---------- 3. o contador roda uma vez ---------- */
+  document.querySelectorAll('[data-contar]').forEach(function (el) {
+    var fim = parseInt(el.getAttribute('data-contar'), 10);
+    if (isNaN(fim)) return;
+    var pronto = false;
+    var rodar = function () {
+      if (pronto) return;
+      pronto = true;
+      if (menosMovimento) { el.textContent = ('0' + fim).slice(-2); return; }
+      var t0 = null, dur = 1100;
+      var passo = function (t) {
+        if (t0 === null) t0 = t;
+        var p = Math.min(1, (t - t0) / dur);
+        var suave = 1 - Math.pow(1 - p, 3);
+        el.textContent = ('0' + Math.round(fim * suave)).slice(-2);
+        if (p < 1) requestAnimationFrame(passo);
+      };
+      requestAnimationFrame(passo);
+    };
+    if ('IntersectionObserver' in window) {
+      new IntersectionObserver(function (es, o) {
+        es.forEach(function (e) { if (e.isIntersecting) { rodar(); o.disconnect(); } });
+      }, { threshold: 0.6 }).observe(el);
+    } else { rodar(); }
+  });
+
+  /* ---------- 3b. a barra do topo: sombra ao descer e lâmina no celular ---------- */
+  (function () {
+    var barra = document.querySelector('.barra');
+    var botao = document.querySelector('.hamb');
+    var lamina = document.getElementById('menu-movel');
+    if (!barra) return;
+
+    /* 8px fazia a cápsula aparecer no primeiro tremido do dedo. 40 é mais ou
+       menos meia altura da barra: dá tempo de ler o topo limpo antes do fade. */
+    var marcarRolagem = function () {
+      raiz.classList.toggle('rolou', window.scrollY > 40);
+    };
+    marcarRolagem();
+    window.addEventListener('scroll', marcarRolagem, { passive: true });
+
+    if (!botao || !lamina) return;
+
+    var rotulo = botao.querySelector('.hamb__rotulo');
+
+    /* marca no menu a seção em que a pessoa está. Lido na hora de abrir, que
+       é o único momento em que a lâmina aparece: nada fica escutando scroll. */
+    var marcarAtual = function () {
+      var links = lamina.querySelectorAll('.lamina__menu a');
+      var y = window.scrollY + 140;
+      var atual = null;
+      Array.prototype.forEach.call(links, function (a) {
+        a.removeAttribute('aria-current');
+        var alvo = document.querySelector(a.getAttribute('href'));
+        if (alvo && alvo.offsetTop <= y) atual = a;
+      });
+      if (atual) atual.setAttribute('aria-current', 'true');
+    };
+
+    var abrir = function (sim) {
+      botao.setAttribute('aria-expanded', sim ? 'true' : 'false');
+      if (rotulo) rotulo.textContent = sim ? 'Fechar' : 'Menu';
+      lamina.hidden = !sim;
+      if (sim) {
+        marcarAtual();
+        lamina.scrollTop = 0;
+        /* a classe entra dois quadros depois: no mesmo, o navegador pinta o
+           estado final de uma vez e a cascata não acontece */
+        lamina.classList.remove('abrindo');
+        requestAnimationFrame(function () {
+          requestAnimationFrame(function () { lamina.classList.add('abrindo'); });
+        });
+      } else {
+        lamina.classList.remove('abrindo');
+      }
+      /* com a lâmina aberta a barra precisa de fundo mesmo parada no topo,
+         senão o menu abre atrás de um logo solto no ar */
+      raiz.classList.toggle('menu-aberto', sim);
+      document.body.style.overflow = sim ? 'hidden' : '';
+      if (sim) {
+        lamina.focus();
+      } else {
+        botao.focus();
+      }
+    };
+
+    botao.addEventListener('click', function () {
+      abrir(botao.getAttribute('aria-expanded') !== 'true');
+    });
+
+    lamina.addEventListener('click', function (e) {
+      if (e.target.closest('a')) abrir(false);
+    });
+
+    document.addEventListener('keydown', function (e) {
+      if (e.key === 'Escape' && !lamina.hidden) abrir(false);
+    });
+
+    /* se a janela cresce e o hambúrguer some, a lâmina não pode ficar presa aberta */
+    window.addEventListener('resize', function () {
+      if (!lamina.hidden && getComputedStyle(botao).display === 'none') abrir(false);
+    });
+  })();
+
+  /* ---------- 3c. a faixa de projetos: arrasto, setas e pontas ---------- */
+  (function () {
+    var trilho = document.querySelector('.trilho');
+    if (!trilho) return;
+    var setas = Array.prototype.slice.call(document.querySelectorAll('.seta[data-obras]'));
+
+    var passo = function () {
+      var card = trilho.querySelector('.obra');
+      if (!card) return trilho.clientWidth * 0.8;
+      var estilo = getComputedStyle(trilho.querySelector('.obras'));
+      return card.getBoundingClientRect().width + parseFloat(estilo.columnGap || estilo.gap || 0);
+    };
+
+    /* ----- a volta sem emenda -----
+       A lista é duplicada e a cópia sai da ordem de leitura e da navegação por
+       teclado. Quando a rolagem passa da metade, ela volta meia largura: como
+       as duas metades são iguais, o olho não vê o corte. Sem JS a faixa
+       continua sendo a lista original, arrastável e completa. */
+    var lista = trilho.querySelector('.obras');
+    var originais = Array.prototype.slice.call(lista.children);
+    /* duas cópias, não uma: com uma só, a faixa precisaria passar pela
+       posição zero, onde não existe nada à esquerda, e a volta piscava no
+       canto. Com três jogos ela vive sempre no do meio, com conteúdo dos
+       dois lados. */
+    var paraClonar = originais.concat(originais);
+    paraClonar.forEach(function (card) {
+      var copia = card.cloneNode(true);
+      copia.setAttribute('aria-hidden', 'true');
+      Array.prototype.forEach.call(copia.querySelectorAll('a'), function (a) {
+        a.setAttribute('tabindex', '-1');
+      });
+      /* a cópia nasce depois que o observador da cortina já foi montado, então
+         ela nunca seria revelada e ficaria recortada a zero, com a moldura
+         vazia. Aqui ela já entra aberta. */
+      Array.prototype.forEach.call(copia.querySelectorAll('[data-cortina]'), function (el) {
+        el.removeAttribute('data-cortina');
+        el.classList.add('dentro');
+      });
+      if (copia.hasAttribute('data-cortina')) {
+        copia.removeAttribute('data-cortina');
+        copia.classList.add('dentro');
+      }
+      lista.appendChild(copia);
+    });
+
+    /* o período é a distância entre um card e a sua cópia, nunca metade da
+       largura total: o recuo lateral da lista não se repete, então metade
+       cairia fora do ponto e a emenda apareceria */
+    var periodo = function () {
+      var cards = lista.children;
+      if (cards.length < originais.length + 1) return 0;
+      /* medido em fração: offsetLeft arredonda, e o vão entre cards é
+         fracionário, então o inteiro deixava a emenda meio pixel fora */
+      return cards[originais.length].getBoundingClientRect().left
+           - cards[0].getBoundingClientRect().left;
+    };
+
+    /* a posição vive aqui como número quebrado. Somar direto no scrollLeft
+       não funciona: a 22px por segundo cada quadro anda 0,37px, o navegador
+       arredonda na leitura e o avanço se perde inteiro. */
+    var pos = trilho.scrollLeft;
+    var ultimoEscrito = -1;
+
+    /* a posição vive sempre no jogo do meio, em [período, 2×período) */
+    var normalizar = function (x) {
+      var t = periodo();
+      if (t <= 0) return x;
+      var y = (x - t) % t;
+      if (y < 0) y += t;
+      return y + t;
+    };
+
+    var levarPara = function (x) {
+      pos = normalizar(x);
+      trilho.scrollLeft = pos;
+      ultimoEscrito = Math.round(trilho.scrollLeft);
+    };
+
+    /* já nasce no jogo do meio: assim existe card dos dois lados desde a
+       primeira pintura, e a volta nunca passa pela ponta vazia */
+    levarPara(periodo());
+    window.addEventListener('resize', function () { levarPara(pos); });
+
+    /* rolagem que não foi minha (dedo no celular, roda do mouse) manda na
+       posição: eu só volto a somar a partir de onde a pessoa deixou */
+    var relogioRolagem = null;
+    trilho.addEventListener('scroll', function () {
+      /* comparar a posição, e não guardar um sinalizador: o navegador junta
+         várias escritas num só evento e o sinalizador ficaria fora de passo */
+      if (Math.round(trilho.scrollLeft) === ultimoEscrito) return;
+      pos = trilho.scrollLeft;
+      /* enquanto a pessoa rola, inclusive na inércia do dedo, o passeio sai
+         do caminho: os dois escrevendo no mesmo scrollLeft dá tremor */
+      motivos.rolando = true;
+      conferirPausa();
+      clearTimeout(relogioRolagem);
+      relogioRolagem = setTimeout(function () {
+        motivos.rolando = false;
+        conferirPausa();
+      }, 900);
+    }, { passive: true });
+
+    /* ----- o passeio: 22px por segundo, bem abaixo da esteira de nomes da
+       faixa escura, para os dois movimentos não se confundirem ----- */
+    var VELOCIDADE = 22;
+    var parado = false, naTela = true, anterior = null, pendente = 0;
+    var motivos = { ponteiro: false, foco: false, arrasto: false, rolando: false };
+
+    var conferirPausa = function () {
+      parado = motivos.ponteiro || motivos.foco || motivos.arrasto || motivos.rolando;
+    };
+
+    /* as setas entram como dívida que o mesmo laço paga suavemente, em vez de
+       um scrollBy que brigaria com o passeio quadro a quadro */
+    setas.forEach(function (b) {
+      b.addEventListener('click', function () {
+        var d = parseInt(b.getAttribute('data-obras'), 10) * passo();
+        if (menosMovimento) levarPara(pos + d);
+        else pendente += d;
+      });
+    });
+
+    var quadro = function (t) {
+      if (anterior === null) anterior = t;
+      var dt = Math.min(t - anterior, 100) / 1000;
+      anterior = t;
+      var anda = (parado || !naTela) ? 0 : VELOCIDADE * dt;
+      var paga = 0;
+      if (Math.abs(pendente) > 0.5) {
+        paga = pendente * 0.14;
+        pendente -= paga;
+      } else {
+        pendente = 0;
+      }
+      if (anda || paga) levarPara(pos + anda + paga);
+      requestAnimationFrame(quadro);
+    };
+
+    if (!menosMovimento) {
+      trilho.addEventListener('pointerenter', function () { motivos.ponteiro = true; conferirPausa(); });
+      trilho.addEventListener('pointerleave', function () { motivos.ponteiro = false; conferirPausa(); });
+      trilho.addEventListener('focusin', function () { motivos.foco = true; conferirPausa(); });
+      trilho.addEventListener('focusout', function () { motivos.foco = false; conferirPausa(); });
+
+      /* fora da tela o passeio para: nada de gastar quadro à toa */
+      if ('IntersectionObserver' in window) {
+        new IntersectionObserver(function (es) {
+          es.forEach(function (e) { naTela = e.isIntersecting; });
+        }, { threshold: 0 }).observe(trilho);
+      }
+      requestAnimationFrame(quadro);
+    }
+
+    /* arrasto com o mouse: o dedo já rola sozinho, o ponteiro não */
+    var pegou = false, x0 = 0, esq0 = 0, andou = 0;
+
+    trilho.addEventListener('pointerdown', function (e) {
+      if (e.pointerType === 'touch') return;
+      pegou = true; andou = 0;
+      x0 = e.clientX;
+      esq0 = trilho.scrollLeft;
+      motivos.arrasto = true; conferirPausa();
+      trilho.setPointerCapture(e.pointerId);
+    });
+
+    trilho.addEventListener('pointermove', function (e) {
+      if (!pegou) return;
+      var d = e.clientX - x0;
+      if (Math.abs(d) > 4) {
+        andou = Math.abs(d);
+        trilho.classList.add('arrastando');
+      }
+      /* passa pelo normalizador: arrastar para trás no começo dá a volta
+         em vez de bater na parede do contêiner */
+      levarPara(esq0 - d);
+    });
+
+    var soltar = function (e) {
+      if (!pegou) return;
+      pegou = false;
+      motivos.arrasto = false; conferirPausa();
+      try { trilho.releasePointerCapture(e.pointerId); } catch (err) {}
+      /* o clique só é engolido se foi arrasto mesmo, senão o card não abre */
+      if (andou > 6) {
+        setTimeout(function () { trilho.classList.remove('arrastando'); }, 0);
+      } else {
+        trilho.classList.remove('arrastando');
+      }
+    };
+    trilho.addEventListener('pointerup', soltar);
+    trilho.addEventListener('pointercancel', soltar);
+  })();
+
+  /* ---------- 4. o cursor: um ponto e um anel que persegue ---------- */
+  var fino = window.matchMedia('(hover: hover) and (pointer: fine)').matches;
+  if (fino && !menosMovimento) {
+    var ponto = document.createElement('div'); ponto.className = 'cursor-ponto';
+    var anel = document.createElement('div');  anel.className = 'cursor-anel';
+    document.body.appendChild(ponto); document.body.appendChild(anel);
+
+    var px = 0, py = 0, ax = 0, ay = 0, ligado = false;
+
+    window.addEventListener('mousemove', function (ev) {
+      px = ev.clientX; py = ev.clientY;
+      if (!ligado) { ligado = true; ax = px; ay = py; raiz.classList.add('cursor-ligado'); }
+      ponto.style.transform = 'translate3d(' + px + 'px,' + py + 'px,0)';
+
+      var sob = document.elementFromPoint(px, py);
+      raiz.classList.toggle('cursor-sobre', !!(sob && sob.closest('a, button, .pilula, .obra__moldura')));
+      raiz.classList.toggle('cursor-claro', !!(sob && sob.closest('.escura')));
+    }, { passive: true });
+
+    window.addEventListener('mouseout', function (e) {
+      if (!e.relatedTarget) raiz.classList.remove('cursor-ligado');
+    });
+
+    (function seguir() {
+      ax += (px - ax) * 0.16;
+      ay += (py - ay) * 0.16;
+      anel.style.transform = 'translate3d(' + ax + 'px,' + ay + 'px,0)';
+      requestAnimationFrame(seguir);
+    })();
+  }
+})();
+</script>
+
+</body>
+</html>
