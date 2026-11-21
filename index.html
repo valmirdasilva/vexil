@@ -1034,6 +1034,8 @@ html { scroll-behavior: smooth; }
 .rodape__col a.sub, .rodape__legal a.sub { background-image: none; padding-bottom: 0; }
 .rodape__col a:hover, .rodape__legal a:hover { color: var(--bronze-cl); }
 
+.rodape__elos { display: flex; flex-wrap: wrap; gap: 22px; }
+
 .rodape__legal {
   display: flex; flex-wrap: wrap; justify-content: space-between; gap: 14px;
   margin-top: clamp(34px, 4.2vw, 54px);
@@ -1580,8 +1582,8 @@ html { scroll-behavior: smooth; }
         </ul>
       </div>
       <!-- A coluna do telefone saiu: o numero ja esta no botao "Chamar no
-           WhatsApp" logo acima e no menu de celular. Quando a Vexil tiver
-           Instagram, ele volta aqui como quarta coluna. -->
+           WhatsApp" logo acima e no menu de celular. O Instagram entrou na
+           linha legal, embaixo, e nao como coluna: e um endereco so. -->
       <div class="rodape__col">
         <h3>Onde</h3>
         <ul>
@@ -1593,7 +1595,10 @@ html { scroll-behavior: smooth; }
 
     <div class="rodape__legal">
       <span>© 2026 Vexil Co.</span>
-      <a class="sub" href="#inicio">Voltar ao topo</a>
+      <span class="rodape__elos">
+        <a class="sub" href="https://instagram.com/vexilco" target="_blank" rel="noopener">Instagram</a>
+        <a class="sub" href="#inicio">Voltar ao topo</a>
+      </span>
     </div>
   </div>
 </footer>
