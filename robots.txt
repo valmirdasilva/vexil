@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://valmirdasilva.github.io/vexil/sitemap.xml
+Sitemap: https://vexil.company/sitemap.xml
